@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/verdeclaro">
+
+
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/grupoRadio"
+       android:backgroundTint="@color/colorPrimary"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternativa A"
+
+            android:id="@+id/opcaoA"
+            android:textColor="@color/branco"
+             />
+
+        <RadioButton
+            android:id="@+id/opcaoB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Alternativa B"
+            android:textColor="@color/branco"/>
+
+        <RadioButton
+            android:id="@+id/opcaoC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Alternativa C"
+            android:textColorLink="#009688"
+            android:textColor="@color/branco"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="96dp"
+        android:background="@color/verde"
+        android:text="OK"
+        android:onClick="atualizaPerguntas"
+        android:textColor="@color/branco"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="244dp"
+        android:layout_height="154dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/img"
+        android:fontFamily="casual"
+        android:text="@string/pergunta"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:gravity="center"
+
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

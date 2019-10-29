@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuizMMC</string>
+    <string name="video">Video</string>
+    <string name="pgt">Perguntas</string>
+    <string name="resultado">RESULTADO</string>
+    <string name="pergunta">Qual o MMC( minimo multiplo comum ) de 2 ? </string>
+</resources>
