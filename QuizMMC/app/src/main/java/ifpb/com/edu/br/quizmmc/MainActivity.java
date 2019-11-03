@@ -24,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     public RadioGroup radioGroup;
     public TextView textoPergunta;
-
+    public TextView contQuestao;
     public RadioButton opcaoA;
     public RadioButton opcaoB;
     public RadioButton opcaoC;
@@ -53,14 +53,14 @@ public class MainActivity extends AppCompatActivity {
         botaoOk.setEnabled(false);
 
         textoPergunta = (TextView) findViewById(R.id.textView2);
-
+        contQuestao = (TextView) findViewById(R.id.textView5);
         opcaoA = (RadioButton) findViewById(R.id.opcaoA);
         opcaoB = (RadioButton) findViewById(R.id.opcaoB);
         opcaoC = (RadioButton) findViewById(R.id.opcaoC);
         img = (ImageView) findViewById(R.id.imageView);
 
        // QuizData dbHelper = new QuizData(this);
-        Questao q1 = new Questao("pergunta 1","opcaoA","opcaoB","opcaoC",1);
+        Questao q1 = new Questao("pergunta 1 testando tamanho para ver se fica bnt","opcaoA","opcaoB","opcaoC",1);
 
         Questao q2 = new Questao("pergunta 2","opcaoA","opcaoB","opcaoC",1);
 
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        }else {
+        }else {contQuestao.setText(numeroPergunta+1 +"/5");
             q =questoes.get(numeroPergunta);
             textoPergunta.setText(q.getPergunta());
             opcaoA.setText(q.getOpcaoA());
@@ -164,8 +164,27 @@ public class MainActivity extends AppCompatActivity {
 
         final AlertDialog alert = builder.create();
         builder.setTitle("Resultado");
-        builder.setIcon(R.drawable.camera);
-        builder.setMessage("Voce acertou " + respostasCorretas + " questoes!");
+
+        if(respostasCorretas <3){
+
+            builder.setIcon(R.drawable.ruim);
+            builder.setMessage("Voce acertou " + respostasCorretas + " questoes! Não desanime, continue treinando, não se esqueça que você pode ver o vídeo quantas vezes for necessário");
+        }
+        else if(respostasCorretas <5)
+        {
+
+            builder.setIcon(R.drawable.rgl);
+            builder.setMessage("Voce acertou " + respostasCorretas + " questoes!Foi por pouco,continue treinando");
+        }
+        else{
+
+            builder.setIcon(R.drawable.otimos);
+            builder.setMessage("Voce acertou " + respostasCorretas + " questoes! Parabéns pelo desempenho,continue treinando");
+
+
+        }
+
+
 
         builder.setPositiveButton("Inicio", new DialogInterface.OnClickListener() {
                     @Override
