@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.imageView);
 
        // QuizData dbHelper = new QuizData(this);
-        Questao q1 = new Questao("pergunta 1 testando tamanho para ver se fica bnt","opcaoA","opcaoB","opcaoC",1);
+        Questao q1 = new Questao("pergunta 1 ","opcaoA","opcaoB","opcaoC",1);
 
         Questao q2 = new Questao("pergunta 2","opcaoA","opcaoB","opcaoC",1);
 

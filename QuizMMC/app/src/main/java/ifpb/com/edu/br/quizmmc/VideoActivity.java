@@ -38,19 +38,11 @@ public class VideoActivity  extends YouTubeBaseActivity implements YouTubePlayer
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean loadAgain) {
-        Log.i("Script", "RAIZ 1");
-        if(!loadAgain){
-            Log.i("Script", "RAIZ 2");
+
+
             player.cueVideo(ID_VIDEO);
         }
     }
 
 
-  /*  public void callYoutube(View view){
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=EKciqGyHlOk");
-        uri = Uri.parse("vnd.youtube:"+uri.getQueryParameter("v"));
 
-        Intent it = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(it);
-    }*/
-}
